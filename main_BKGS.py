@@ -39,9 +39,6 @@ def parse_args():
     parser.add_argument('--redist', type=str2bool, default=True,
                         help='Whether to redistribute the degree.')
 
-    # parser.add_argument('--max_depth', type=int, default=0,
-    #                         help='Maximum depth of recursion.')
-
     parser.add_argument('--max_rounds', type=int, default=50,
                                 help='Maximum rounds.')
 
@@ -73,7 +70,7 @@ if __name__ == '__main__':
 
     ratio1 = args.ratio1
     ru = args.ru
-    # max_depth = args.max_depth
+    
     max_rounds = args.max_rounds
 
     lam = args.lam
@@ -101,7 +98,7 @@ if __name__ == '__main__':
     syn_graph_name = f"{m1_name}_gen.txt"
     eval_json_name = f"{m1_name}_eval.json"
 
-    save_graph_flag = True
+    save_graph_flag = False
     max_depth = 0
     if mode == 'judge':
         max_depth = 10

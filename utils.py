@@ -44,12 +44,10 @@ def save_graph(
 
 
         original_edges.append(
-
             (
                 original_u,
                 original_v
             )
-
         )
         
 
@@ -76,9 +74,7 @@ def save_graph(
 
 
             f.write(
-
                 f"{u},{v}\n"
-
             )
 
     print(
@@ -90,21 +86,14 @@ def save_graph(
     
     if save_info:
         info={
-
             "num_U":
                 graph["num_U"],
-
             "num_V":
                 graph["num_V"],
-
-
             "num_edges":
                 len(graph["edges"]),
-
-
             "generated_time":
                 str(datetime.now())
-
         }
 
 
@@ -117,8 +106,6 @@ def save_graph(
 
 
         with open(info_path, "w",encoding="utf-8") as f:
-
-
             json.dump(
                 info,
                 f,
@@ -133,11 +120,6 @@ def save_results(
         output_dir,
         filename="evaluation.json"
 ):
-
-
-    """
-    Save evaluation metrics.
-    """
 
 
     os.makedirs(
@@ -191,35 +173,27 @@ def build_bipartite_graph(edges):
 
 
     U_mapping={
-
         old:i
         for i,old in enumerate(U_original)
-
     }
 
 
     V_mapping={
-
         old:i
         for i,old in enumerate(V_original)
-
     }
 
 
 
     U_reverse={
-
         i:old
         for old,i in U_mapping.items()
-
     }
 
 
     V_reverse={
-
         i:old
         for old,i in V_mapping.items()
-
     }
 
 
@@ -234,12 +208,10 @@ def build_bipartite_graph(edges):
         v_id=V_mapping[v]
 
         internal_edges.append(
-
             (
                 u_id,
                 v_id
             )
-
         )
 
 
@@ -253,17 +225,14 @@ def build_bipartite_graph(edges):
 
 
     for u,v in internal_edges:
-
         adj_U[u].add(v)
         adj_V[v].add(u)
 
 
 
     degree_U=[
-
         len(adj_U[i])
         for i in range(len(U_original))
-
     ]
 
 

@@ -100,7 +100,7 @@ if __name__ == '__main__':
     syn_graph_name = f"{m1_name}_gen.txt"
     eval_json_name = f"{m1_name}_eval.json"
 
-    save_graph_flag = True
+    save_graph_flag = False
     max_depth = 0
     if mode == 'judge':
         max_depth = 10
