@@ -98,6 +98,7 @@ if __name__ == '__main__':
     syn_graph_name = f"{m1_name}_gen.txt"
     eval_json_name = f"{m1_name}_eval.json"
 
+    save_res_flag = True
     save_graph_flag = False
     max_depth = 0
     if mode == 'judge':
@@ -183,7 +184,7 @@ if __name__ == '__main__':
     # for key, value in results.items():
     #     print(f"{key}: {value}")
 
-    save_res_flag = True
+    
     if save_res_flag:
         save_results(
         results,

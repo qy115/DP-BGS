@@ -2,9 +2,7 @@ import numpy as np
 from collections import defaultdict
 
 
-
 def build_subgraph_graph(block):
-    
     U_nodes = list(block["U_nodes"])
     V_nodes = list(block["V_nodes"])
     edges = list(block["edges"])
@@ -142,8 +140,6 @@ def perturb_total_edges(
     )
 
     return noisy_edges
-
-
 
 def split_by_noisy_degree(
         graph,

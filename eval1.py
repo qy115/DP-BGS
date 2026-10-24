@@ -1,14 +1,10 @@
 import os
 import json
 import time
-from itertools import combinations
-
 import numpy as np
 from scipy.sparse import coo_matrix
 from scipy.sparse.linalg import eigsh
-
-
-
+from itertools import combinations
 
 def graph_sizes(graph):
     
@@ -18,7 +14,6 @@ def graph_sizes(graph):
 
 
 def degree_sequences(graph):
-    
     n_u, n_v = graph_sizes(graph)
 
     if "degree_U" in graph and "degree_V" in graph:
@@ -64,11 +59,6 @@ def evaluate_one_metric(name, original_value, synthetic_value):
         f"relative_error={result['relative_error']}"
     )
     return result
-
-
-# ---------------------------------------------------------------------
-# Degree metrics
-# ---------------------------------------------------------------------
 
 def degree_distribution_similarity(d1, d2):
     d1 = np.asarray(d1, dtype=np.int64)
@@ -198,8 +188,6 @@ def butterfly_count(graph):
     return int(count)
 
 
-
-
 def save_json(data, path):
     directory = os.path.dirname(path)
     if directory:
@@ -225,7 +213,6 @@ ORIGINAL_CACHE_KEYS = {
 
 
 def compute_original_metrics(graph, cal_butterfly=True, cal_neighbor=True):
-    """Compute and cache only the original metrics needed by evaluate_all."""
     start = time.time()
     du, dv = degree_sequences(graph)
 
@@ -254,8 +241,6 @@ def evaluate_all(
     cal_neighbor=True,
 ):
     """
-    Evaluate a synthetic bipartite graph against the original graph.
-
     Metrics:
       - edge_num
       - density
@@ -339,7 +324,6 @@ def evaluate_all(
     )
 
     # Spectral similarity
-    spec_start = time.time()
     spectral = spectral_similarity(original_graph, synthetic_graph)
     results["spectral"] = {"similarity": spectral}
     print(f"Spectral similarity: {spectral}")

@@ -247,7 +247,6 @@ def build_bipartite_graph(edges):
 
     return {
 
-
         "U":
             list(range(len(U_original))),
 
@@ -353,7 +352,6 @@ def load_bipartite_graph(
     graph = build_bipartite_graph(
         edges
     )
-
 
     return graph
 

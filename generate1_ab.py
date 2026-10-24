@@ -1,9 +1,7 @@
 import numpy as np
 from collections import defaultdict
 
-
 def build_subgraph_graph(block):
-
     U_nodes = list(block["U_nodes"])
     V_nodes = list(block["V_nodes"])
     edges = list(block["edges"])
