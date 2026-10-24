@@ -48,7 +48,7 @@ Similarly, we provide an example of synthesizing the bipartite graph using BKGS.
 python main_BKGS.py --dataset pantry --epsilon 0.5 --seed_n 1
 ```
 
-The DBGS is the similar to BKGS.
+The DBGS is similar to BKGS.
 ```
 python main_DBGS.py --dataset pantry --epsilon 0.5 --seed_n 1
 ```
