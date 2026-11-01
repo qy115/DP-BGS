@@ -24,6 +24,7 @@ DP-BGS/
 │   ├── movie/
 │   ├── pantry/  
 │   ├── yahoo/
+├── DPBGS_Technical_Report.pdf       # Technical report
 ├── eval1.py                         # Used for evaluation
 ├── generate1_ab.py                  # Synthesizing the bipartite graph using BKGS or DBGS
 ├── generate1.py                     # Synthesizing the bipartite graph using JBGS
