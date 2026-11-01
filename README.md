@@ -14,7 +14,7 @@ Below is the directory structure of this project.
 
 ```plaintext
 DP-BGS/
-├── datasets/                         # Datasets used in the project
+├── datasets/                        # Datasets used in the project
 │   ├── book.txt     
 │   ├── movie.txt   
 │   ├── pantry.txt       
